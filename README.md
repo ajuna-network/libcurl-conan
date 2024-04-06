@@ -14,7 +14,7 @@ Add this package to your project's `conanfile.txt`:
 
 ```ini
 [requires]
-libcurl/8.7.0@svnscha/dev
+libcurl/8.6.0@svnscha/dev
 
 [generators]
 cmake
