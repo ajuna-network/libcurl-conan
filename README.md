@@ -35,5 +35,7 @@ This exports the package to your local cache, usable by other projects.
 For local development you could simply use
 
 ```sh
-conan create .
+conan create --version 8.6.0 --build=missing .
 ```
+
+or similar.
