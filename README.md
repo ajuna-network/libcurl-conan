@@ -20,27 +20,17 @@ libcurl/8.7.0@svnscha/dev
 cmake
 ```
 
-To install dependencies, run:
+## 🧪 Export the Package
+
+To export the Conan package, navigate to the directory containing conanfile.py and run:
 
 ```sh
-conan install .
+conan export --user svnscha --channel dev --version 8.6.0 .
 ```
 
-To build your project with Conan, run:
-
-```sh
-mkdir build && cd build
-conan build ..
-```
+This exports the package to your local cache, usable by other projects.
 
 ## 🧪 Building the Package
-
-To create the Conan package, navigate to the directory containing conanfile.py and run:
-
-```sh
-conan create --user svnscha --channel dev -s build_type=Debug .
-conan create --user svnscha --channel dev -s build_type=Release .
-```
 
 For local development you could simply use
 

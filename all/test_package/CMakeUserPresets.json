@@ -1,0 +1,9 @@
+{
+    "version": 4,
+    "vendor": {
+        "conan": {}
+    },
+    "include": [
+        "/code/external/libcurl-conan/all/test_package/build/clang-14-x86_64-gnu14-debug/generators/CMakePresets.json"
+    ]
+}
