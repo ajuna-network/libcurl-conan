@@ -43,7 +43,7 @@ class LibcurlConan(ConanFile):
     def source(self):
         git = Git(self)
         git.clone(url="https://github.com/curl/curl.git", target=".")
-        git.checkout(f"curl-{self.version.replace(".", "_")}")
+        git.checkout("curl-%s" % self.version.replace(".", "_"))
 
     def generate(self):
         tc = CMakeToolchain(self)
@@ -82,7 +82,7 @@ class LibcurlConan(ConanFile):
         else:
             tc.variables["HTTP_ONLY"] = "OFF"
 
-        if self.options.CURL_USE_SCHANNEL:
+        if self.options.CURL_USE_SCHANNEL and self.settings.os == "Windows":
             tc.variables["CURL_USE_SCHANNEL"] = "ON"
         else:
             tc.variables["CURL_USE_SCHANNEL"] = "OFF"
